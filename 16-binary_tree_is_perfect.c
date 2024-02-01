@@ -23,7 +23,7 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 	height = binary_tree_height(tree);
 	nodes = binary_tree_size(tree);
 
-	pwr = (size_t)_pow_recursion(2, height + 1);
+	pwr = (size_t)pwr_recursion(2, height + 1);
 	return (pwr - 1 == nodes);
 }
 
@@ -52,6 +52,7 @@ int pwr_recursion(int i, int j)
  * Return: 0 if tee is NUL
  *
  */
+
 size_t binary_tree_size(const binary_tree_t *tree)
 {
 	if (!tree)
